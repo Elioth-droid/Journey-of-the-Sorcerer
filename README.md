@@ -14,7 +14,7 @@ He decidido que empezare mi viaje con C# y su framework .Net. Pues tengo entendi
 
 En este nivel lo que necesito es aprender a usar las herramientas básicas.
 
-- [Tutorial oficial para instalar .NET 10 y crear la primera aplicación.] (https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/intro?utm_source=chatgpt.com)
-Guía oficial de la CLI de .NET.
-Introducción a GitHub, que toma menos de una hora y cubre repositorios, ramas, commits y pull requests.
-Learn Git Branching, únicamente los niveles iniciales.
+- Tutorial oficial para instalar .NET 10 y crear la primera aplicación. (https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/intro?utm_source=chatgpt.com)
+- Guía oficial de la CLI de .NET. (https://learn.microsoft.com/es-es/dotnet/core/tools/?utm_source=chatgpt.com)
+- Introducción a GitHub, que toma menos de una hora y cubre repositorios, ramas, commits y pull requests. (https://github.com/skills/introduction-to-github?utm_source=chatgpt.com)
+- Learn Git Branching, únicamente los niveles iniciales. (https://learngitbranching.js.org/?locale=es_AR)
