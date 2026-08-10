@@ -8,7 +8,7 @@ No se para donde voy... nunca lo se con certeza. Me siento como si flotara en el
 
 Iré dividiendo mis aprendizaje en niveles para poder dedicarle a casa cosa su tiempo y no estar pivotando entre temas, como sé que terminaré haciendo de todas formas.
 
-##Nivel 0: Git me way out  of here.
+## Nivel 0: Git me way out  of here.
 
 Tutorial oficial para instalar .NET 10 y crear la primera aplicación.
 Guía oficial de la CLI de .NET.
