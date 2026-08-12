@@ -3,7 +3,7 @@
 Bueno, el primer paso es dominar las curiossas exentricidades de Git y Github antes siquiera de iniciar mi entendimiento arcano del lenguaje de programación.
 Quisiera ser un poco más ordenado con estas notas pero haré mi mejor trabajo. Como siempre lo hago justo antes de fracasar.
 
-**Github** es un repositorio virtual para proyectos de programación y **Git** es la herramienta de escritorio que se usa para administar estos proyectos.
+**Github** es un repositorio virtual para proyectos de programación y **Git** es la herramienta de escritorio que se usa para administar estos proyectos dentro del almacenamiento local y luego quizá subirlos a Github.
 
 > [!TIP]
 
@@ -28,4 +28,10 @@ Github es un editor de texto bastante pobre y poco intuitivo por lo que me dejo 
 >- Strikethrough uses two tildes. ~~Scratch this.~~
 
 
+## Notas de Git
 
+Primero lo más importante, hacer un **commit**. Un commit guarda una versión de mis cambios en el historial del repositorio local, dentro de mi maquina.
+
+>git commit
+
+Se puede entender que es algo así como un checkpoint en mi proyecto.
