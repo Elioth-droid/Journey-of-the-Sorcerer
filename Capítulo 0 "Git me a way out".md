@@ -66,6 +66,41 @@ Me es difícil de entender en abstracto pero tratare de recordar esta advertenci
 
 >"La prohibición no es absoluta, pero mientras aprendes usa esta regla: nunca hagas rebase en main ni sobre commits que otras personas ya estén usando."
 
-**HEAD** es el nombre simbólico del commit actualmente seleccionado -- es, básicamente, el commit sobre el que estás trabajando.
+### Algunos términos útiles.
 
+**HEAD** es el nombre simbólico del commit actualmente seleccionado, es básicamente, el commit sobre el que estás trabajando.
+Un **hash** es el identificador único de un commit, algo parecido a su número de cédula.
+
+>main^
+
+Es equivalente a " selecciona el primer padre de main"
+
+>main^^
+
+Es el abuelo (segunda generación de ancestros) de main
+
+>git branch -f main HEAD~3
+
+~# mueve el head esa cantidad de veces hacia arriba.
+-f force -  fuerza a una rama a que esté en un commit especifico y lo use como punto de partida.
+
+>git branch -f <rama> <destino>
+
+Esto obliga a una rama a moverse hacia un commit especifico.
+
+>git reset
+
+Reescribe el historial moviendo la rama hacia atrás. (recomendado para uso local)
+
+>git revert
+
+Conserva el historial y añade un commit que deshace otro. (recomendado para uso _pushed_ o remoto)
+
+>git cherry-pick (commit)(commit2)...
+
+Con este metodo puedo mover varios commit a la ubicacion donde esta mi head.
+
+>git clone
+
+Me permite subir una copia de mi archivo local a un repositorio en la nube, como GitHub;
 
