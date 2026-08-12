@@ -1,4 +1,4 @@
-# Capítulo 0 "Git me a way Out"
+# Capítulo_0_Git me a way Out
 
 Bueno, el primer paso es dominar las curiossas exentricidades de Git y Github antes siquiera de iniciar mi entendimiento arcano del lenguaje de programación.
 Quisiera ser un poco más ordenado con estas notas pero haré mi mejor trabajo. Como siempre lo hago justo antes de fracasar.
