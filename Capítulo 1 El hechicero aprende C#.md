@@ -12,7 +12,7 @@ Cada casilla representa **25 XP**. Cuando completes una unidad de experiencia, c
 
 | Progreso | XP para subir | XP total al completar | Casillas de experiencia |
 |:--|--:|--:|:--|
-| Nivel 1 → 2 | 200 XP | 200 XP | ✅ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
+| Nivel 1 → 2 | 200 XP | 200 XP | ✅ ✅ ✅ ✅ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 2 → 3 | 400 XP | 600 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 3 → 4 | 600 XP | 1.200 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 4 → 5 | 800 XP | 2.000 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
@@ -86,17 +86,27 @@ Al ejecutar el código que escribí antes, pude notar que el mensaje "¡Hola Mun
 
 >Console
 
-Esta parte se llama una **Classes (Class)**. Las clases tienen métodos, o se podria decir que los métodos viven dentro de las clases. Para poder llamar al metodo primero debo especificar a qué clase pertenece. Por ahora puedo quedarme con que todos los métodos que tienen ingenerencia sobre la consola funcionan bajo la clase "Console"
+Esta parte se llama una **Classes (Class)**. Las clases tienen métodos, o se podría decir que los métodos viven dentro de las clases. Para poder llamar al metodo primero debo especificar a qué clase pertenece. Por ahora puedo quedarme con que todos los métodos que tienen injerencia sobre la consola funcionan bajo la clase "Console"
 
 >.
 
-Luego viene el punto. Que separa el nombre de la clase llamado Console y el método llamado WriteLine(). el punto es el _Member access operator._ En otras palabras, el punto es como yo navego de la clase a uno de sus metodos.
+Luego viene el punto. Que separa el nombre de la clase llamado Console y el método llamado WriteLine(). el punto es el _Member access operator._ En otras palabras, el punto es como yo navego de la clase a uno de sus métodos.
 
 >WriteLine()
 
-Esta es, como ya he visto, la parte llamara _method_ o el método. Siempre se puede identificar un _method_ porque tiene un par de paréntesis después. Cada método tiene un trabajo. El método _WriteLine()_ tiene el trabajo de escribir una lineal de data en la consola de salida. La data que se imprime es especificada dentrod e los parentescos como un parametro _input_. Algunos métodos necesitan ese parámetro adicional, otros no. Pero **siempre** que se llame a un metodo debo usar los parentesis desúés del nombre. Estos parentesis son conocidos como _method invocation operator_
+Esta es, como ya he visto, la parte llamara _method_ o el método. Siempre se puede identificar un _method_ porque tiene un par de paréntesis después. Cada método tiene un trabajo. El método _WriteLine()_ tiene el trabajo de escribir una lineal de data en la consola de salida. La data que se imprime es especificada dentrod e los parentescos como un parámetro _input_. Algunos métodos necesitan ese parámetro adicional, otros no. Pero **siempre** que se llame a un metodo debo usar los paréntesis después del nombre. Estos paréntesis son conocidos como _method invocation operator_
 
 >;
 
 Finalmente el punto y coma es el _end of statement operator_ Un _Statement_ es una instrucción completa en C#. El punto y coma le dice al compilador que ah termina de entrar el comando especifico.
+
+## Creando un nuevo proyecto.
+
+Un proyecto de C# es una combinación de dos cosas. La primera es mi _Source code_ C# con instrucciones que yo escribo en C# para que la computadora las ejecute. La segunda parte es la configuración, instrucciones adicionales que le doy al computador para ayudarlo a saber como debe compilar o traducir el código C# en instrucciones de código binario que el computador pueda correr. Ambas partes viven en simples archivos de texto en mi computadora. **Los _Source Codes_ de C# usan la extensión .CS** en cambio una configuración de proyecto usa la extensión **.csproj**. Teniendo en cuenta que estos son simples archivos de texto, yo podría crearlos manualmente si así lo necesito.
+
+Aunque usualmente lo mejor es comenzar con un Template, que ya trae algún código preparado para trabajar, en VS code se puede hacer con _Crtl+shift+P_
+
+>_Crtl+shift+P_
+
+Muchas de las aplicaciones que desarrollarás en C# requerirán que trabajes con datos. A veces, esos datos estarán codificados directamente en tu aplicación. Los valores codificados directamente son valores que permanecen constantes e inalterables durante la ejecución del programa. Por ejemplo, es posible que necesites imprimir un mensaje al usuario cuando una operación se complete con éxito. Un mensaje de "éxito" probablemente sería el mismo cada vez que se ejecute la aplicación. Este valor codificado también se conoce como constante o valor literal. Supongamos que deseas mostrar un mensaje formateado al usuario final que contenga diferentes tipos de datos. El mensaje incluiría cadenas de texto codificadas directamente, combinadas con información que tu aplicación recopila del usuario. Para mostrar un mensaje formateado, necesitarás crear valores codificados directamente y definir variables que puedan almacenar datos de un tipo específico, ya sean numéricos, alfanuméricos, etc.
 
