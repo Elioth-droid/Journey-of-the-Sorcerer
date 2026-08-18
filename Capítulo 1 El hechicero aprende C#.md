@@ -110,3 +110,164 @@ Aunque usualmente lo mejor es comenzar con un Template, que ya trae algún códi
 
 Muchas de las aplicaciones que desarrollarás en C# requerirán que trabajes con datos. A veces, esos datos estarán codificados directamente en tu aplicación. Los valores codificados directamente son valores que permanecen constantes e inalterables durante la ejecución del programa. Por ejemplo, es posible que necesites imprimir un mensaje al usuario cuando una operación se complete con éxito. Un mensaje de "éxito" probablemente sería el mismo cada vez que se ejecute la aplicación. Este valor codificado también se conoce como constante o valor literal. Supongamos que deseas mostrar un mensaje formateado al usuario final que contenga diferentes tipos de datos. El mensaje incluiría cadenas de texto codificadas directamente, combinadas con información que tu aplicación recopila del usuario. Para mostrar un mensaje formateado, necesitarás crear valores codificados directamente y definir variables que puedan almacenar datos de un tipo específico, ya sean numéricos, alfanuméricos, etc.
 
+### Qué es un valor literal?
+
+Un valor _Literal_ es una constante que nunca cambia. Son valores que se deben entregar pero no se operan entre ellos de ninguna manera.
+
+### Usar un carácter literal
+ 
+Si solo se quiere que un solo carácter alfanumérico sea presentado en la pantalla, se puede crear un carácter literal _Char literal_ rodeando un solo valor alfanumérico en single quotes ('').
+
+>Console.WriteLine('b');
+
+Ahora bien, si en vez de usar single quites(') rodeara el carácter con paréntesis ("") crearía un _String Data Type_
+
+_String_ se usa para presentar múltiples caracteres en pantalla.
+_Char_ se usa siempre que se quiera mostrar un solo carácter (Sin cálculos asociados)
+
+## Usar _Integer literals_
+
+Si se quiere mostrar un número entero (Sin fracciones) en la consola de salida, se puede usar un **int literal**. el término int es la contracción para integer (Entero en la lengua de Macondo). A diferencia de otros métodos un _int_ no necesita un operador.
+
+>Console.WriteLine (123);
+
+## Usar _Floating-point literals_
+
+Un número _floating point_ es un número que contiene algún decimal, por ejemplo 3.14159. C# soporta tres tipos de datos para representar números decimales: _Float_, _double_ and _decimal_. Cada tipo soporta varios grados de precisión. 
+
+Float Type    Precision
+----------------------------
+float         ~6-9 digits
+double        ~15-17 digits
+decimal        28-29 digits
+
+En este caso, precisión refleja el número de dígitos, más allá del punto decimal se son precisos.
+
+>Console.WriteLine(0.25f);
+
+Para crear un literal float, se añade la letra **f** después del numero. En este contexto la "F" es llamada un **sufijo literal**, el sufijo literal le dice al compilador que tu deseas trabajar con un valor del tipo _float_. Se pueden usar mayúsculas o minúsculas para un sufijo literal.
+
+> [HINT!] Nota como el valor tipo _float_ es el menos preciso de todos, así que es mejor usar este tipo de data para fracciones fijas para evitar eorrores de computación inesperados.
+
+>Console.WriteLine(2.625);
+
+Para crear un _double literal_, solo se debe poner el número con su punto decimal. El compilador por defecto asume que el número es un doble cuando no tiene un sufijo literal.
+
+Para crear un literal decimal, añade la letra m después del número. En este contexto, la m se denomina sufijo literal. El sufijo literal le indica al compilador que deseas trabajar con un valor de tipo decimal. Puedes usar una m minúscula o una M mayúscula como sufijo literal para un decimal.
+
+## Usar _Boolean_ literals
+
+Si lo que quiero es imprimir un valor representando si algo es _falso_ o _verdadero_, se puede usar un literal booleano.
+
+El término bool significa booleano.
+
+>Console.WriteLine(true);
+>Console.WriteLine(false);
+
+Una booleana literal representa la idea misma de verdadero o falso. Se usan muchas booleanas cuando queremos empezar a añadir decisiones lógicas a nuestra aplicaciones.
+
+## Porque enfatizar tanto en los _data types_?
+
+Los _Data Types_ juegan un papel central en C#. De hecho, el énfasis en los diferentes data types es una de las características principales de C# comparado con otros lenguajes de programación como JavaScript. Los diseñadores de C# creían que podían ayudar a los desarrolladores a evitar errores comunes de software al imponer tipos de datos específicos.
+
+## Los _Data Types_ definen las capacidades.
+
+Antes, se podía ver como _strings_ y _char_s fueron usados para "presentación" no para cálculos, si quisiera hacer una operación matemática de valores numéricos se deben usar valores como _int_ o _decimal_s. En cambio si un dato es usado solo para presentacion o manipulacion de texto, se debe usar un _string_ o un _char_
+
+Supongamos que necesitas recopilar datos de un usuario, como un número de teléfono o un código postal. Dependiendo del país o región donde vivas, esos datos pueden consistir en _int_ numéricos. Sin embargo, dado que rara vez realizas cálculos matemáticos con números de teléfono y códigos postales, es preferible utilizar un tipo de dato _string_ al trabajar con ellos.
+
+En resumen
+
+string for words, phrases, or any alphanumeric data for presentation, not calculation
+char for a single alphanumeric character
+int for a whole number
+decimal for a number with a fractional component
+bool for a true/false value
+
+## Declarar variables
+
+Un _literal_ es literalmente un valor _hard-code_. los valores hard-coded sn valores que son constantes y no se cambian a lo largo de la ejecución del programa. Sin embargo, la mayoría de aplicaciones va a requerir trabajar con valores que aún no conocemos. En otras palabras, se necesita trabajar con datos que vienen del usuario, desde archivos a través del internet.
+
+Cuando necesitamos trabajar con datos que **no son** hard-coded, es entonces que declaramos variables.
+
+### Qué es una variable?
+
+Una variable es un contenedor para almacenar un tipo de valor. Variables son importantes porque sus valores pueden cambiar, o variar, a lo largo de la ejecución del programa.
+
+Las variables puede ser asignadas, leídas y cambiadas. Se usan variables para guardar valores que pretendemos usar en nuestro código.
+
+El nombre de una variable es una etiqueta fácil de recordar que el compilador asigna a una dirección de memoria. Cuando quieras almacenar o modificar un valor en esa dirección de memoria, o cuando quieras recuperar el valor almacenado, simplemente usas el nombre de la variable que creaste.
+
+### Declarar Variables
+
+Para crear una nueva variable, primero debemos declarar el tipo de dato de dicha variable, y luego darle un nombre.
+
+string firstName;
+
+En este caso, estamos creando una nueva variable del tipo _String_ llamada _firstname_ Desde ahora, esta variable solo puede contener datos del tipo _string_.
+
+Se puede escoger cualquier nombre, mientras que se adhiera a algunas reglas de sintaxis de C# para el nombrado de variables.
+
+## Nombre de Variables y convenciones
+
+Un desarrollador de software famoso dijo una vez "Lo más difícil del desarrollo de software es nombrar cosas". El nombre de una variable no solo debe seguir algunas reglas de sintaxis, si no que también debe ayudar a hacer el código más entendible para el ojo humano. 
+
+Aquí hay algunas consideraciones importantes sobre los nombres de variables: 
+- Los nombres de variables pueden contener caracteres alfanuméricos y el guion bajo. No se permiten caracteres especiales como el símbolo de almohadilla (#) ni el símbolo de dólar ($).
+- Los nombres de variables deben comenzar con una letra o un guion bajo, no con un número.
+- Los nombres de variables distinguen entre mayúsculas y minúsculas, lo que significa que `string Value;` y `string value;` son dos variables diferentes.
+- Los nombres de variables no deben ser palabras clave de C#. Por ejemplo, no se pueden usar las siguientes declaraciones de variables: `decimal decimal;` ni `string string;`.
+
+Hay algunas convenciones acerca del nombrado que ayudan a mantener variables legibles y fáciles de identificar.
+
+- Los nombres de las variables deben usar el formato camel case, que consiste en usar una letra minúscula al principio de la primera palabra y una mayúscula al principio de cada palabra siguiente. Por ejemplo: string thisIsCamelCase;.
+- Los nombres de las variables deben comenzar con una letra del alfabeto. Los desarrolladores usan el guion bajo para un propósito específico, así que intenta no usarlo por ahora.
+- Los nombres de las variables deben ser descriptivos y significativos en tu aplicación. Elige un nombre para tu variable que represente el tipo de datos que contendrá.
+- Los nombres de las variables deben ser una o más palabras completas unidas. No utilice contracciones ni abreviaturas, ya que el nombre de la variable (y, por lo tanto, su propósito) podría resultar confuso para quienes lean su código.
+- Los nombres de las variables no deben incluir el tipo de dato de la variable. Es posible que encuentre alguna recomendación de usar un estilo como string strValue;. Esa recomendación ya no está vigente.
+
+Aquí algunos ejemplos de declaracion de variables usando el tipo de dato que hemos visto hasta ahora.
+
+>char userOption;
+
+>int gameScore;
+
+>decimal particlesPerMillion;
+
+<bool processedCustomer;
+
+## Declarar implicitly typed local variables
+
+El compilador de C# trabaja en segundo plano para ayudarte a escribir tu código. Puede inferir el tipo de datos de una variable a partir de su valor inicial. En esta unidad, aprenderás sobre esta característica, denominada variables locales con tipado implícito.
+
+>var message = "Hello world!";
+
+En este ejemplo, se creó una variable _string_ usando la palabra clave `var` en lugar de `string`. La palabra clave `var` le indica al compilador de C# que el tipo de dato está implícito en el valor asignado. Una vez que se infiere el tipo, la variable se comporta como si se hubiera declarado con su tipo de dato real. La palabra clave `var` se usa para ahorrar pulsaciones de teclas cuando los tipos son largos o cuando el tipo es obvio por el contexto.
+
+>var message = "Hello world!";
+
+Debido a que la variable message se establece inmediatamente con el valor de cadena "Hello World!", el compilador de C# entiende la intención y trata cada instancia de message como una instancia de tipo string.
+
+De hecho, la variable de mensaje es de tipo cadena y nunca se puede modificar. Por ejemplo, considere el siguiente código:
+
+>var message = "Hello World!";
+>message = 10.703m;
+
+Si ejecutas este código, verás el siguiente mensaje de error.
+
+CS0029: No se puede convertir implicitamente el tipo 'decimal' a 'string'.
+
+Es importante comprender que la palabra clave `var` depende del valor que se utilicé para inicializar la variable. Si intentas usar la palabra clave `var` sin inicializar la variable, recibirás un error al compilar el código.
+
+>[HINT!] Al principio, se recomienda que sigas utilizando el nombre real del tipo de dato al declarar variables hasta que te familiarices con el código. Usar el tipo de dato al declarar variables te ayudará a escribir código de forma más precisa y concisa.
+
+debo recordar que en todo casi, si uso el sufijo al final de un valor, este es el que intrínsecamente le da a la variable su clase:
+
+3       → int
+3f      → float
+3.0     → double
+3.0f    → float
+
+f / F	float	3.14f
+d / D	double	3.14d
+m / M	decimal	3.14m
