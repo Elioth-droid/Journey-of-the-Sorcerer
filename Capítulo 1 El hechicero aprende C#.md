@@ -12,7 +12,7 @@ Cada casilla representa **25 XP**. Cuando completes una unidad de experiencia, c
 
 | Progreso | XP para subir | XP total al completar | Casillas de experiencia |
 |:--|--:|--:|:--|
-| Nivel 1 → 2 | 200 XP | 200 XP | ✅ ✅ ✅ ✅ ⬜ ⬜ ⬜ ⬜ |
+| Nivel 1 → 2 | 200 XP | 200 XP | ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ |
 | Nivel 2 → 3 | 400 XP | 600 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 3 → 4 | 600 XP | 1.200 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 4 → 5 | 800 XP | 2.000 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
@@ -271,3 +271,19 @@ debo recordar que en todo casi, si uso el sufijo al final de un valor, este es e
 f / F	float	3.14f
 d / D	double	3.14d
 m / M	decimal	3.14m
+
+## Volviento al tema de crear proyectos en Visual Code (Comunity)
+
+Siempre asigna un buen nombre a tus proyectos. No recordarás qué hizo _ConsoleApp12_ dentro de dos semanas.
+Para la ubicación, elige un lugar que puedas encontrar fácilmente. (La ubicación predeterminada está bien, pero no es muy visible, así que anótala).
+También hay una casilla para colocar la solución y el proyecto en el mismo directorio. Para proyectos pequeños, recomiendo marcar esta casilla. Los programas (soluciones) más grandes pueden estar formados por varios proyectos. En estos casos, es conveniente colocar los proyectos en su propio directorio (carpeta) dentro del directorio de la solución. Sin embargo, para programas pequeños con un solo proyecto, es más sencillo colocar todo en una sola carpeta.
+
+### Namespaces
+
+Todos los métodos residen en contenedores como una clase, pero incluso la mayoría de las clases residen en otros contenedores llamados *espacios de nombres* (namespaces). Los espacios de nombres son herramientas puramente destinadas a organizar el código, pero resultan valiosos cuando se trabaja con cientos o miles de clases. La clase `Console` reside en un espacio de nombres llamado `System`. Si añadimos esto a nuestro mapa de código, el resultado es el siguiente:
+
+<img width="295" height="251" alt="image" src="https://github.com/user-attachments/assets/1f15148c-3792-49ee-871b-77fea4e17452" />
+
+### Base class library
+
+El mapa completo de un programa podría verse algo como 'System.Console.WriteLine();' dónde system seria el macro método donde todo calza. pero este maá no esta completo, es solo una pequeña parte de un todo. a estas librerias se les llama el Base Class Library, no planteo por ahora verlas todas peri si las más fundamentales.
