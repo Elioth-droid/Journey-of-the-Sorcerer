@@ -13,7 +13,7 @@ Cada casilla representa **25 XP**. Cuando completes una unidad de experiencia, c
 | Progreso | XP para subir | XP total al completar | Casillas de experiencia |
 |:--|--:|--:|:--|
 | Nivel 1 → 2 | 200 XP | 200 XP | ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ |
-| Nivel 2 → 3 | 400 XP | 600 XP | ✅ ✅ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
+| Nivel 2 → 3 | 400 XP | 600 XP | ✅ ✅ ✅ ✅ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 3 → 4 | 600 XP | 1.200 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 4 → 5 | 800 XP | 2.000 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
 | Nivel 5 → 6 | 1.000 XP | 3.000 XP | ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ |
