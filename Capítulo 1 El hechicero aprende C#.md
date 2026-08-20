@@ -287,3 +287,72 @@ Todos los métodos residen en contenedores como una clase, pero incluso la mayor
 ### Base class library
 
 El mapa completo de un programa podría verse algo como 'System.Console.WriteLine();' dónde system seria el macro método donde todo calza. pero este maá no esta completo, es solo una pequeña parte de un todo. a estas librerias se les llama el Base Class Library, no planteo por ahora verlas todas peri si las más fundamentales.
+
+## Realizar un _basic string formatting_ en C#
+
+Como desarrollador de software (Nivel 1 actualmente), necesitarás escribir código C# para combinar y formatear datos literales y variables para crear un nuevo valor. Ese valor podría mostrarse, guardarse en un archivo o enviarse a través de la red. Afortunadamente, C# ofrece muchas maneras de combinar y formatear datos. Supongamos que quieres mostrar la salida de una aplicación de línea de comandos que estás desarrollando. Quieres mostrar valores que incluyan texto literal, texto en variables, datos numéricos y datos textuales en otros idiomas. ¿Cómo lo formatearías correctamente para que el usuario pueda entender lo que tu aplicación le está comunicando?
+
+## Character escape sequences
+
+Un carácter de secuencia de escape es una instrucción para que el compilador inserte un carácter especial a la salida de mi _string_
+
+En C# la secuencia de escape empieza con es la tecla slash invertido (\) seguida por el carácter que le da el escape.
+
+>- \n Añade una nueva línea.
+>- \t Añade una tabulación.
+>- \" Me permite usar comillas dentro de un string literal sin que el compilador se confunda.
+>- \\ Es por si necesito escribir un backslash por alguna razón. (Tiene que haber una forma más fácil de hacer esto).
+>- \u Añadir un carácter especial por medio de su código Unicode
+
+Esto entonces:
+
+>Console.WriteLine("Generating invoices for costumer \"Contoso Corp\" ... \n");
+>Console.WriteLine("Invoice: 1021 \t\tComplete!");
+>Console.WriteLine("Invoice: 1022 \t\tComplete!");
+>Console.Write("\nOutput Directory: \t");
+
+Daría como resultado en la consola:
+
+Generating invoices for costumer "Contoso Corp" ... 
+
+Invoice: 1021 		Complete!
+Invoice: 1022 		Complete!
+
+Output Directory:
+
+## Verbatim string literal.
+
+Un _Verbatim String Literal_ va a mantener todos los espacios y caracteres que ponga sin la necesidad de usar el backlash de escape (Lo sabia!, si hay un metodo más facil)
+
+>Para usar un verbatim solo debo añadir el arroba (@) antes de iniciar el string, osea antes de las comillas.
+
+## Unicode escape characters
+
+También se puede agregar caracteres codificados en cadenas literales utilizando la secuencia de escape \u, seguida de un código de cuatro caracteres que representa algún carácter en Unicode (UTF-16).
+
+>[HINT!] Esto de los unicode no va a funcionar en la consola de windows y dependiendo de la plataforma en la que esté trabajando puede que tenga que usar el UTF-32 en vez del UTF 16. Es un tema complicado que merece ser revisado más adelante.
+
+## Qué es una concatenación de Strings?
+
+La concatenación de cadenas es un término técnico que se refiere a la combinación de dos o más _Strings_ de texto en una sola. A diferencia de la suma, el segundo valor se añade al final del primero, y así sucesivamente.
+
+>"+" con este conector se concatenan varios strings en uno solo.
+
+## Qué es una interpolación de Strings?
+
+Si bien la concatenación de cadenas es sencilla y práctica, la interpolación de cadenas está ganando popularidad en situaciones donde se necesita combinar muchas cadenas literales y variables en un único mensaje formateado.
+
+La interpolación de cadenas combina varios valores en una única cadena literal mediante una plantilla y una o más expresiones de interpolación. Una expresión de interpolación se indica con llaves '{ }'. Dentro de las llaves se puede colocar cualquier expresión de C# que devuelva un valor. La cadena literal se convierte en una plantilla cuando se le antepone el carácter '$'.
+
+En otras palabras, en vez de usar este formato:
+
+>string message = greeting + " " + firstName + "!";
+
+Se puede usar esta form más consisa:
+
+>string message = $"{greeting} {firstName}!";
+
+Para combinar un verbatim literal con un sting interpolation puedo hacer lo siguiente
+
+>$@ (en ese ordén)
+
