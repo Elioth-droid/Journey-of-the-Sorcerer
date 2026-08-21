@@ -514,8 +514,32 @@ int fahrenheit = 94;
 fahrenheit = fahrenheit-32;
 decimal celsius = (decimal)fahrenheit*(5m/9);
 Console.WriteLine("The temperature is "+celsius+" Celsius.");
+
+
+
 ```
 Da como resultado:
 ```csharp
 The temperature is 34,444444444444444444444444447 Celsius.
-``` 
+```
+## Configuation builds.
+
+Al momento de realizar una compilación hay varias configuraciones que puedo usar, por defecto vienen 2: ***Debug*** y ***Release***. Debug es la óptima para trabajar porque compila mi codito tal como está mientras que ***Release*** es mejor para cuando ya haya terminado mi código y lo vaya a compartir, porque optimiza un poco mi codigo para que funcione mejor. Esa optimización a veces puede  dificultan encontrar errores puntuales y por eso es mejor trabajar usando solo Debug,
+
+<img width="324" height="133" alt="image" src="https://github.com/user-attachments/assets/c58a86a5-cab2-4225-b86f-874def9f2044" />
+
+## Algunas notas sobre... anotaciones.
+
+```csharp
+/*El siguiente código es un programa simple en C# que solicita al usuario que ingrese
+información sobre un objeto y luego genera una descripción basada en esa información.
+Aquí está el código completo:*/
+
+Console.WriteLine("What kind of thing are we talking about?");
+string a = Console.ReadLine(); //Este es el primer input del usuario, que se almacena en la variable 'a'. y define cual es la cosa.
+Console.WriteLine("How would you describe it? Big? Azure? Tattered");
+string b = Console.ReadLine(); //Este es el segundo input del usuario, que se almacena en la variable 'b'. y define como es la cosa.
+string c = "of Doom"; //Este es un string fijo y añade dramatismo a la descripción de la cosa.
+string d = "3000"; //Este es el último string fijo y añade un número exagerado a la descripción de la cosa.
+Console.WriteLine("The " + b + " " + a + " of " + c + " " + d + "!");
+```
