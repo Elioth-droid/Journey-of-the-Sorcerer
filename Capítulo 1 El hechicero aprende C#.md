@@ -356,3 +356,166 @@ Para combinar un verbatim literal con un sting interpolation puedo hacer lo sigu
 
 >$@ (en ese ordén)
 
+## Realizar proceso matemáticos con _implicid data conversion_
+
+Pues nada, como en otros lenguajes los operadores aritméticos parecen funcionar igual en C#. en este caso '+' se usa para sumar. 
+Si trato de sumar un _int_ con un _string_ el compilador entiende y hace una conversión implícita, convirtiendo ambos en strings.
+El símbolo de **paréntesis ()** se convierte en otro operador _ovearloaded_. En este caso, los paréntesis de apertura y cierre forman el operador de orden de operaciones, como en una fórmula matemática. Indicas que quieres que se resuelva primero el paréntesis más interno, lo que resulta en la suma de los valores enteros widgetsSold y el valor 7. Una vez resuelto, el resultado se convertirá implícitamente a una cadena para que pueda concatenarse con el resto del mensaje.
+
+string firstName = "Juan";
+int widgetsSold = 7;
+Console.WriteLine(firstName+" sold "+(widgetsSold+7)+" widgets ");
+
+Da como resultado en consola:
+
+> Juan sold 14 widgets 
+
+> [HINT!] en general lo mejor es evitar hacer cálculos (matematicos) y concatenaciones en la misma lineal de código.
+
+## Operaciones matemáticas básicas
+
+int sum = 7+5;
+int difference = 7-5;
+int product = 7 * 5;
+int quotient = 7/5;
+
+Console.WriteLine("Sum: " +sum);
+Console.WriteLine("Difference: "+difference);
+Console.WriteLine("Product: "+product);
+Console.WriteLine("Quotient: "+quotient);
+
+Como puedes ver: 
+- '+' es el operador de suma
+- '-' es el operador de resta
+- '*' es el operador de multiplicación
+- '/' es el operador de división
+
+## Agregar código para convertir los resultados de la división entera.
+
+¿Qué ocurre si no estoy trabajando con valores literales? En otras palabras, ¿qué pasa si necesito dividir dos variables de tipo entero pero no quiero que el resultado se trunque? En ese caso, debo realizar una conversión de tipo de dato de _int_ a _decimal_. La conversión de tipo es un tipo de conversión de datos que le indica al compilador que trate temporalmente un valor como si fuera de un tipo de dato diferente. Para convertir un entero a decimal, añades el operador de conversión antes del valor. Usas el nombre del tipo de dato entre paréntesis delante del valor para realizar la conversión. En este caso, añadirías (decimal) antes de las variables first y second.
+
+int first = 7;
+int second = 5;
+decimal quotient = (decimal)first / (decimal)second;
+Console.WriteLine(quotient);
+
+ahora si, da como resultado en consola
+
+>1.4
+
+## Escribir código para determinar el resto de una división entera.
+
+El operador de módulo % indica el restante de una división entera. En realidad, lo que se obtiene de esto es si un número es divisible por otro. Esto puede ser útil durante operaciones de procesamiento largas.
+
+Console.WriteLine($"Modulus of 200 / 5 : {200 % 5}");
+Console.WriteLine($"Modulus of 7 / 5 : {7 % 5}");
+
+da como return:
+
+Modulus of 200 / 5 : 0
+Modulus of 7 / 5 : 2
+
+indicando que  de dichas divisiones cual seria su respectivo restante.
+
+## Orden de las operaciones
+
+Ya se que con los paréntesis puedo afectar el orden de las operaciones en un código. Pero esa no es la una manera en que el orden de las operaciones es determinado.
+
+Si tengo problemas siempre puedo recordar "PEMA" (como la esposa de Tenzin)
+
+- **P**arentesis (lo que haya entre paréntesis se opera primero)
+- **E**xponentes
+- **M**ultiplicación y división (primero la izquierda)
+- **A**dición y sustracción (de izquierda a derecha)
+
+Si bien en C# no hay exponentes siempre se puede usar el método 'System.Math.Pow' cuando lo necesite.
+
+int value1 = 3+4*5;
+int value2 = (3+4)*5;
+Console.WriteLine(value1);
+Console.WriteLine(value2);
+
+Da en consola:
+
+23
+35
+
+## Increment and decrement
+
+Igual que pasa en JavaScript, frecuentemente voy a tener que incrementar o decrecer valores.
+
+> El operador += suma y y asigna el valor a la derecha del operador en el del operador de la izquierda.
+
+int value = 0;     // value is now 0.
+value = value + 5; // value is now 5.
+value += 5;        // value is now 10.
+
+> El operador ++ incrementa el valor en '1'.
+
+int value = 0;     // value is now 0.
+value = value + 1; // value is now 1.
+value++;           // value is now 2.
+
+Los operadores como =, -=, *=, y -- se conocen como operadores de asignación compuesta porque combinan alguna operación además de asignar el resultado a la variable. El operador += se denomina específicamente operador de asignación de suma.
+
+int value = 1;
+value = value +1;
+Console.WriteLine("first increment "+ value +"\n");
+
+value +=1;
+Console.WriteLine("Second increment: "+value  +"\n");
+
+value ++;
+Console.WriteLine("Third increment: "+value +"\n");
+
+value = value -1;
+Console.WriteLine("First decrement: "+value +"\n");
+
+value -= 1;
+Console.WriteLine ("Second decrement "+value+"\n");
+
+value --;
+Console.WriteLine("Third decrement "+value+"\n");
+
+Da como resultado en la consola
+
+first increment 2
+
+Second increment: 3
+
+Third increment: 4
+
+First decrement: 3
+
+Second decrement 2
+
+Third decrement 1
+
+Ahora bien el orden donde se colocan estos operadores es importante si sumo ++value, se le sumara antes de realizar la operación. En cambio su sumo value++, se le sumará solo después de realizar la operación correspondiente.
+
+```csharp
+int value = 1;
+value++;
+Console.WriteLine("First: "+ value);
+Console.WriteLine($"Second: {value++}");
+Console.WriteLine("Third: " + value);
+Console.WriteLine("Fouth: "+(++value));
+```
+esto da como resultado:
+
+```csharp
+First: 2
+Second: 2
+Third: 3
+Fouth: 4
+```
+```csharp
+int fahrenheit = 94;
+fahrenheit = fahrenheit-32;
+decimal celsius = (decimal)fahrenheit*(5m/9);
+Console.WriteLine("The temperature is "+celsius+" Celsius.");
+```
+Da como resultado:
+```csharp
+The temperature is 34,444444444444444444444444447 Celsius.
+``` 
